@@ -21,9 +21,9 @@ jobs:
           az account show
           az group list
           pwd
-    - name: Azure Files Upload
-      uses: rnakamine/azure-files-upload@v1.0.0
+    - name: 'Copy files to Azure Storage'
+      uses: bacongobbler/azure-blob-storage-upload@v1.1.1
       with:
-        connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-        source: .
-        destination: my-share
+          connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING}}
+          container_name: docs
+          source_dir: '/connect2github/*'
