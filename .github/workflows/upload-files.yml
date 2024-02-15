@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
-          source_dir: /connect2github/from-github
+          source_dir: 'connect2github'
           container_name: github-azure
           account_name: connect2github
           connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
