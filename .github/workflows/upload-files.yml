@@ -11,4 +11,3 @@ jobs:
           container_name: github-azure
           account_name: connect2github
           connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-          sync: 'false'
