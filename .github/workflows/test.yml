@@ -21,7 +21,7 @@ jobs:
           az account show
           az group list
           pwd
-    - name: 'post-files'
+    - name: Azure Files Upload
       uses: rnakamine/azure-files-upload@v1.0.0
       with:
         connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
