@@ -21,9 +21,3 @@ jobs:
           az account show
           az group list
           pwd
-    - name: 'Copy files to Azure Storage'
-      uses: bacongobbler/azure-blob-storage-upload@v1.1.1
-      with:
-          connection_string: ${{ secrets.STORAGE_ACCOUNT_SECRET}}
-          container_name: docs
-          source_dir: '/connect2github/*'
