@@ -1,5 +1,8 @@
 name: Upload To Azure Blob Storage
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
 jobs:
   upload:
     runs-on: ubuntu-latest
